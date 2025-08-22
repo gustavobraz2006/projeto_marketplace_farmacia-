@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>generica</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    function buscarProduto() {
+      let termo = document.getElementById("busca").value;
+      if (termo.trim() === "") {
+        alert("Digite algo para buscar!");
+      } else {
+        alert("Você buscou por: " + termo);
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Drogasil_logo.svg/512px-Drogasil_logo.svg.png" alt="Drogasil">
+      Farmacia G
+    </div>
+
+    <!-- Busca -->
+    <div class="search-bar">
+      <input type="text" id="busca" placeholder="O que deseja encontrar?">
+      <button onclick="buscarProduto()">🔍</button>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+      <div class="menu-item">
+        <i>📦</i> Meus Pedidos</div>
+
+      <div class="menu-item">
+        <i>👤</i> <span>Minha conta</span> <br>Entrar</div>
+
+      <div class="menu-item cesta">
+        <i>🛒</i> 0 / Cesta <span><br>R$ 0,00</span></div>
+        
+    </div>
+  </header>
+</body>
+</html>
