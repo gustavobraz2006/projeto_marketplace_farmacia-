@@ -1,86 +1,96 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
+/* Cabeçalho */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
   background: #fff;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: rgb(34, 238, 204);
+  gap: 8px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
+  color: #d62828;
 }
 
 .logo img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Barra de busca */
-.search-bar {
+.search-container {
   flex: 1;
-  margin: 0 20px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
 }
 
-.search-bar input {
-  width: 100%;
-  padding: 10px 40px 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.search-bar button {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #c00;
-  font-size: 18px;
-}
-
-/* Menu */
-.menu {
+.search-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  background: #e6e6e6;
+  border-radius: 100px;
+  padding: 6px 14px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-box i {
+  color: #555;
+  cursor: pointer;
+}
+
+/* Ícones da direita */
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
   font-size: 14px;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+  color: #222;
   cursor: pointer;
-  color: #333;
-}
-
-.menu-item span {
-  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 .menu-item i {
+  color: #a10e0e;
   font-size: 18px;
-  color: #c00;
 }
 
-.cesta span {
-  font-weight: normal;
+.menu-item span {
+  font-size: 13px;
+}
+
+.menu-item strong {
   color: #000;
+}
+
+/* Hover */
+.menu-item:hover {
+  color: #d62828;
 }
